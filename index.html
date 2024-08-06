@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment Booking</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="text-center mb-4">
+            <h1>Doctor Appointment Booking</h1>
+        </div>
+
+        <div class="row">
+            <!-- Booking Section -->
+            <div class="col-md-4">
+                <h2>Book Appointment</h2>
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="patientName">Patient Name</label>
+                        <input type="text" class="form-control" id="patientName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="doctorSelect">Doctor</label>
+                        <select class="form-control" id="doctorSelect" required>
+                            <!-- Options will be populated by JavaScript -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointmentDate">Date</label>
+                        <input type="date" class="form-control" id="appointmentDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointmentTime">Time</label>
+                        <input type="time" class="form-control" id="appointmentTime" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Book Appointment</button>
+                </form>
+            </div>
+
+            <!-- Cancellation Section -->
+            <div class="col-md-4">
+                <h2>Cancel Appointment</h2>
+                <form id="cancellationForm">
+                    <div class="form-group">
+                        <label for="appointmentId">Appointment ID</label>
+                        <input type="text" class="form-control" id="appointmentId" required>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Cancel Appointment</button>
+                </form>
+            </div>
+
+            <!-- Viewing Appointments Section -->
+            <div class="col-md-4">
+                <h2>View Appointments</h2>
+                <button id="viewAppointmentsBtn" class="btn btn-info mb-2">View All Appointments</button>
+                <div id="appointmentsList" class="list-group">
+                    <!-- Appointments will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Doctors Section -->
+        <div class="row">
+            <div class="col-12">
+                <h2>Doctors</h2>
+                <div id="doctorsList" class="row">
+                    <!-- Doctor cards will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
